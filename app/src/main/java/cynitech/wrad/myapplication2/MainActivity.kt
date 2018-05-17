@@ -12,6 +12,7 @@ import android.view.Menu
 import android.view.MenuItem
 import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import java.util.*
 
 
 class MainActivity : AppCompatActivity() {
@@ -67,6 +68,17 @@ class MainActivity : AppCompatActivity() {
                     irAActividadCrearUsuario()
                 }
 
+        boton_ciclo_vida.setOnClickListener { view: View ->
+            irAActividadCicloVida()
+        }
+
+        boton_fragmento.setOnClickListener { view: View ->
+            irAActividadFragmentos()
+        }
+
+        boton_sqlite.setOnClickListener { view: View ->
+            irAActividadSQlite()
+        }
 
     }
 
@@ -100,6 +112,23 @@ class MainActivity : AppCompatActivity() {
 
     fun irAActividadCrearUsuario() {
         val intent = Intent(this, CrearUsuarioActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadCicloVida() {
+        val intent = Intent(this, CicloVidaActivity::class.java)
+        val nuevoUsuario = UsuarioParcelable("Adrian", 5, Date(), true)
+        intent.putExtra("usuario-intent", nuevoUsuario)
+        startActivity(intent)
+    }
+
+    fun irAActividadSQlite() {
+        val intent = Intent(this, SQliteActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadFragmentos() {
+        val intent = Intent(this, FragmentosActivity::class.java)
         startActivity(intent)
     }
 
