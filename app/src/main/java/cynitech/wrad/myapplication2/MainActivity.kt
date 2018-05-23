@@ -11,7 +11,7 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 
 
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         // nuestro codigo
 
-        btn_navegar_activida_dos
+        button_navegar_activida_dos
                 .setOnClickListener { view: View ->
                     irAActividadDos()
                 }
@@ -80,6 +80,14 @@ class MainActivity : AppCompatActivity() {
             irAActividadSQlite()
         }
 
+        boton_menu.setOnClickListener { view: View ->
+            irAActividadMenu()
+        }
+
+        boton_dialogo.setOnClickListener { view: View ->
+            irAActividadDialogo()
+        }
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
@@ -96,6 +104,16 @@ class MainActivity : AppCompatActivity() {
             R.id.action_settings -> true
             else -> super.onOptionsItemSelected(item)
         }
+    }
+
+    fun irAActividadMenu() {
+        val intent = Intent(this, MenuActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun irAActividadDialogo() {
+        val intent = Intent(this, DialogoActivity::class.java)
+        startActivity(intent)
     }
 
     fun irAActividadDos() {
