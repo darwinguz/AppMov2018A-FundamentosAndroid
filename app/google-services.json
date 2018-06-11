@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1084209578671",
+    "firebase_url": "https://ml-kit2018a.firebaseio.com",
+    "project_id": "ml-kit2018a",
+    "storage_bucket": "ml-kit2018a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084209578671:android:c92aae23a2df2b6b",
+        "android_client_info": {
+          "package_name": "cynitech.wrad.myapplication2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084209578671-pbcsc8ffc8kjs5jr4jjiib836ehhbcu5.apps.googleusercontent.com",
+          "client_type": 3
+        },
+        {
+          "client_id": "1084209578671-pbcsc8ffc8kjs5jr4jjiib836ehhbcu5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACjl4wvCWcnpgIQgL5q7imOpLY5__TWgc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -88,6 +88,14 @@ class MainActivity : AppCompatActivity() {
             irAActividadDialogo()
         }
 
+        btn_http_request.setOnClickListener { view: View ->
+            irAActividadHTTPRequest()
+        }
+    }
+
+    fun irAActividadHTTPRequest() {
+        val intent = Intent(this, HTTPRequestActivity::class.java)
+        startActivity(intent)
     }
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
