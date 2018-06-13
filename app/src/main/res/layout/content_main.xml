@@ -152,4 +152,16 @@
         app:layout_constraintTop_toTopOf="@+id/spinner_button"
         app:layout_constraintVertical_bias="1.0" />
 
+    <Button
+        android:id="@+id/btn_camara_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:text="Cámara"
+        app:layout_constraintBottom_toBottomOf="@+id/botton_crear_usuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/botton_crear_usuario" />
+
 </android.support.constraint.ConstraintLayout>

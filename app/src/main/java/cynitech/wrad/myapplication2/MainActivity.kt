@@ -91,6 +91,15 @@ class MainActivity : AppCompatActivity() {
         btn_http_request.setOnClickListener { view: View ->
             irAActividadHTTPRequest()
         }
+
+        btn_camara_activity.setOnClickListener(View.OnClickListener {
+            irAActividadCamara()
+        })
+    }
+
+    fun irAActividadCamara() {
+        val intent = Intent(this, CamaraActivity::class.java)
+        startActivity(intent)
     }
 
     fun irAActividadHTTPRequest() {
