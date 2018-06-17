@@ -95,6 +95,15 @@ class MainActivity : AppCompatActivity() {
         btn_camara_activity.setOnClickListener(View.OnClickListener {
             irAActividadCamara()
         })
+
+        btn_google_map.setOnClickListener(View.OnClickListener {
+            irAActividadMaps()
+        })
+    }
+
+    fun irAActividadMaps() {
+        val intent = Intent(this, MapsActivity::class.java)
+        startActivity(intent)
     }
 
     fun irAActividadCamara() {
