@@ -11,6 +11,8 @@ import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import com.onesignal.OneSignal
+import com.tapadoo.alerter.Alerter
 import kotlinx.android.synthetic.main.content_main.*
 import java.util.*
 
@@ -20,6 +22,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        OneSignal.startInit(this)
+                .inFocusDisplaying(OneSignal.OSInFocusDisplayOption.Notification)
+                .unsubscribeWhenNotificationsAreDisabled(true)
+                .init()
+
+        Alerter.create(this@MainActivity)
+                .setTitle("Hola")
+                .setText("Amigos como estan...")
+                .show()
 
         val permisosDeCamara = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA
         )
