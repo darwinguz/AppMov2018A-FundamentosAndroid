@@ -14,6 +14,7 @@ import android.view.View
 import com.onesignal.OneSignal
 import com.tapadoo.alerter.Alerter
 import kotlinx.android.synthetic.main.content_main.*
+import org.jetbrains.anko.intentFor
 import java.util.*
 
 
@@ -111,6 +112,15 @@ class MainActivity : AppCompatActivity() {
         btn_google_map.setOnClickListener(View.OnClickListener {
             irAActividadMaps()
         })
+
+        btn_anko.setOnClickListener(View.OnClickListener {
+            irAActividadAnko()
+        })
+
+    }
+
+    private fun irAActividadAnko() {
+        startActivity(intentFor<AnkoActivity>())
     }
 
     fun irAActividadMaps() {
